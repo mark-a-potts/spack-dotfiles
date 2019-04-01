@@ -1,0 +1,146 @@
+# -------------------------------------------------------------------------
+# This is the default configuration for Spack's module file generation.
+#
+# Settings here are versioned with Spack and are intended to provide
+# sensible defaults out of the box. Spack maintainers should edit this
+# file to keep it current.
+#
+# Users can override these settings by editing the following files.
+#
+# Per-spack-instance settings (overrides defaults):
+#   $SPACK_ROOT/etc/spack/modules.yaml
+#
+# Per-user settings (overrides default and site settings):
+#   ~/.spack/modules.yaml
+# -------------------------------------------------------------------------
+modules:
+  enable:
+    - tcl
+#   - lmod
+  prefix_inspections:
+    bin:
+      - PATH
+    man:
+      - MANPATH
+    share/man:
+      - MANPATH
+    share/aclocal:
+      - ACLOCAL_PATH
+    lib:
+      - LIBRARY_PATH
+    lib64:
+      - LIBRARY_PATH
+    include:
+      - CPATH
+    lib/pkgconfig:
+      - PKG_CONFIG_PATH
+    lib64/pkgconfig:
+      - PKG_CONFIG_PATH
+    '':
+      - CMAKE_PREFIX_PATH
+  tcl:
+    hash_length: 0
+    naming_scheme: '${PACKAGE}/${VERSION}-${COMPILERNAME}-${COMPILERVER}'
+#   whitelist:
+#     -  '%gcc@7.3.0'
+    blacklist:
+      -  'linux-suse_linux11-x86_64'
+    all:
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}': '${PREFIX}'
+    bacio:
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_LIBd': '${PREFIX}/lib/libbacio_${VERSION}_8.a'
+          '${PACKAGE}_LIB4': '${PREFIX}/lib/libbacio_${VERSION}_4.a'
+          '${PACKAGE}': '${PREFIX}'
+    bufr:
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_LIB8': '${PREFIX}/lib/libbufr_${VERSION}_8.a'
+          '${PACKAGE}_LIBd': '${PREFIX}/lib/libbufr_${VERSION}_d.a'
+          '${PACKAGE}_LIB4': '${PREFIX}/lib/libbufr_${VERSION}_4.a'
+          '${PACKAGE}_LIB8_DA': '${PREFIX}/lib/libbufr_${VERSION}_8_DA.a'
+          '${PACKAGE}_LIBd_DA': '${PREFIX}/lib/libbufr_${VERSION}_d_DA.a'
+          '${PACKAGE}_LIB4_DA': '${PREFIX}/lib/libbufr_${VERSION}_4_DA.a'
+          '${PACKAGE}_LIB4_SS': '${PREFIX}/lib/libbufr_${VERSION}_4_SS.a'
+          '${PACKAGE}': '${PREFIX}'
+    nemsio:
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_LIB': '${PREFIX}/lib/libnemsio_${VERSION}.a'
+          '${PACKAGE}_INC': '${PREFIX}/include'
+          '${PACKAGE}': '${PREFIX}'
+    sfcio:
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_LIB': '${PREFIX}/lib/libsfcio_${VERSION}.a'
+          '${PACKAGE}_INC': '${PREFIX}/include'
+          '${PACKAGE}': '${PREFIX}'
+    sigio:
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_LIB': '${PREFIX}/lib/libsigio_${VERSION}.a'
+          '${PACKAGE}_LIB4': '${PREFIX}/lib/libsigio_${VERSION}.a'
+          '${PACKAGE}_INC': '${PREFIX}/include'
+          '${PACKAGE}_INC4': '${PREFIX}/include'
+          '${PACKAGE}': '${PREFIX}'
+    sp:
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_LIB8': '${PREFIX}/lib/libsp_${VERSION}_8.a'
+          '${PACKAGE}_LIBd': '${PREFIX}/lib/libsp_${VERSION}_d.a'
+          '${PACKAGE}_LIB4': '${PREFIX}/lib/libsp_${VERSION}_4.a'
+          '${PACKAGE}': '${PREFIX}'
+    w3emc:
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_LIB8': '${PREFIX}/lib/libw3emc_${VERSION}_8.a'
+          '${PACKAGE}_LIBd': '${PREFIX}/lib/libw3emc_${VERSION}_d.a'
+          '${PACKAGE}_LIB4': '${PREFIX}/lib/libw3emc_${VERSION}_4.a'
+          '${PACKAGE}': '${PREFIX}'
+    w3nco:
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_LIB8': '${PREFIX}/lib/libw3nco_${VERSION}_8.a'
+          '${PACKAGE}_LIBd': '${PREFIX}/lib/libw3nco_${VERSION}_d.a'
+          '${PACKAGE}_LIB4': '${PREFIX}/lib/libw3nco_${VERSION}_4.a'
+          '${PACKAGE}': '${PREFIX}'
+    perl:
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+  lmod:
+    hash_length: 0
+    core_compilers:
+      - 'intel@19.0.1.144'
+      - 'gcc@7.3.0'
+    blacklist:
+      -  'linux-suse_linux11-x86_64'
+    hierarchy:
+      - 'mpi'
+    all:
+      filter:
+        environment_blacklist: ['CPATH', 'LIBRARY_PATH']
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_DIR': '${PREFIX}'
+          '${PACKAGE}': '${PREFIX}'
+    openmpi:
+      environment:
+        set:
+          SLURM_MPI_TYPE: pmi2
+          OMPI_MCA_btl_openib_warn_default_gid_prefix: '0'
+
+
