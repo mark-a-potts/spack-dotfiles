@@ -82,6 +82,8 @@ modules:
           '${PACKAGE}_ROOT': '${PREFIX}'
           '${PACKAGE}_LIB': '${PREFIX}/lib/libsfcio_${VERSION}.a'
           '${PACKAGE}_INC': '${PREFIX}/include'
+          '${PACKAGE}_LIB4': '${PREFIX}/lib/libsfcio_${VERSION}.a'
+          '${PACKAGE}_INC4': '${PREFIX}/include'
           '${PACKAGE}': '${PREFIX}'
     sigio:
       environment:
@@ -107,6 +109,9 @@ modules:
           '${PACKAGE}_LIB8': '${PREFIX}/lib/libw3emc_${VERSION}_8.a'
           '${PACKAGE}_LIBd': '${PREFIX}/lib/libw3emc_${VERSION}_d.a'
           '${PACKAGE}_LIB4': '${PREFIX}/lib/libw3emc_${VERSION}_4.a'
+          '${PACKAGE}_INC4': '${PREFIX}/include_4'
+          '${PACKAGE}_INC8': '${PREFIX}/include_8'
+          '${PACKAGE}_INCd': '${PREFIX}/include_d'
           '${PACKAGE}': '${PREFIX}'
     w3nco:
       environment:

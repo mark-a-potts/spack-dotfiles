@@ -1,184 +1,42 @@
 compilers:
 - compiler:
-    environment:
-      append-path:
-        LD_LIBRARY_PATH: /gpfsm/dulocal/sles11/intel/2017/compilers_and_libraries_2017.7.259/linux/compiler/lib/intel64
+    environment: {}
     extra_rpaths: []
     flags: {}
     modules: []
-    operating_system: suse_linux11
+    operating_system: rhel7
     paths:
-      cc: /gpfsm/dulocal/sles11/intel/2017/compilers_and_libraries_2017.7.259/linux/bin/intel64/icc
-      cxx: /gpfsm/dulocal/sles11/intel/2017/compilers_and_libraries_2017.7.259/linux/bin/intel64/icpc
-      f77: /gpfsm/dulocal/sles11/intel/2017/compilers_and_libraries_2017.7.259/linux/bin/intel64/ifort
-      fc: /gpfsm/dulocal/sles11/intel/2017/compilers_and_libraries_2017.7.259/linux/bin/intel64/ifort
-    spec: intel@17.0.7
-    target: x86_64
-- compiler:
-    environment:
-      append-path:
-        LD_LIBRARY_PATH: /usr/local/intel/2018/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64_lin
-    extra_rpaths: []
-    flags: {}
-    modules: []
-    operating_system: sles12
-    paths:
-      cc: /gpfsm/dulocal/sles12/intel/2018/compilers_and_libraries_2018.3.222/linux/bin/intel64/icc
-      cxx: /gpfsm/dulocal/sles12/intel/2018/compilers_and_libraries_2018.3.222/linux/bin/intel64/icpc
-      f77: /gpfsm/dulocal/sles12/intel/2018/compilers_and_libraries_2018.3.222/linux/bin/intel64/ifort
-      fc: /gpfsm/dulocal/sles12/intel/2018/compilers_and_libraries_2018.3.222/linux/bin/intel64/ifort
-    spec: intel@18.0.3
-    target: x86_64
-- compiler:
-    environment:
-      append-path:
-        LD_LIBRARY_PATH: /usr/local/intel/2018/compilers_and_libraries_2018.3.222/linux/compiler/lib/intel64_lin
-    extra_rpaths: []
-    flags: {}
-    modules: []
-    operating_system: suse_linux11
-    paths:
-      cc: /gpfsm/dulocal/sles11/intel/2018/compilers_and_libraries_2018.3.222/linux/bin/intel64/icc
-      cxx: /gpfsm/dulocal/sles11/intel/2018/compilers_and_libraries_2018.3.222/linux/bin/intel64/icpc
-      f77: /gpfsm/dulocal/sles11/intel/2018/compilers_and_libraries_2018.3.222/linux/bin/intel64/ifort
-      fc: /gpfsm/dulocal/sles11/intel/2018/compilers_and_libraries_2018.3.222/linux/bin/intel64/ifort
-    spec: intel@18.0.3
-    target: x86_64
-- compiler:
-    environment:
-      append-path:
-        LD_LIBRARY_PATH: /usr/local/intel/2019/compilers_and_libraries_2019.1.144/linux/compiler/lib/intel64_lin
-    extra_rpaths: []
-    flags: {}
-    modules: []
-    operating_system: sles12
-    paths:
-      cc: /gpfsm/dulocal/sles12/intel/2019/compilers_and_libraries_2019.1.144/linux/bin/intel64/icc
-      cxx: /gpfsm/dulocal/sles12/intel/2019/compilers_and_libraries_2019.1.144/linux/bin/intel64/icpc
-      f77: /gpfsm/dulocal/sles12/intel/2019/compilers_and_libraries_2019.1.144/linux/bin/intel64/ifort
-      fc: /gpfsm/dulocal/sles12/intel/2019/compilers_and_libraries_2019.1.144/linux/bin/intel64/ifort
-    spec: intel@19.0.1.144
+      cc: /usr/bin/gcc44
+      cxx: /usr/bin/g++44
+      f77: null
+      fc: null
+    spec: gcc@4.4.7
     target: x86_64
 - compiler:
     environment: {}
     extra_rpaths: []
     flags: {}
     modules: []
-    operating_system: sles12
-    paths:
-      cc: /usr/bin/gcc-4.8
-      cxx: /usr/bin/g++-4.8
-      f77: /usr/bin/gfortran-4.8
-      fc: /usr/bin/gfortran-4.8
-    spec: gcc@4.8
-    target: x86_64
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules: []
-    operating_system: sles12
-    paths:
-      cc: /gpfsm/dulocal/sles12/other/pkgsrc/2018Q1/gcc6/bin/gcc
-      cxx: /gpfsm/dulocal/sles12/other/pkgsrc/2018Q1/gcc6/bin/g++
-      f77: /gpfsm/dulocal/sles12/other/pkgsrc/2018Q1/gcc6/bin/gfortran
-      fc: /gpfsm/dulocal/sles12/other/pkgsrc/2018Q1/gcc6/bin/gfortran
-    spec: gcc@6.4.0
-    target: x86_64
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules: []
-    operating_system: suse_linux11
-    paths:
-      cc: null
-      cxx: null
-      f77: /usr/bin/gfortran-4.3
-      fc: /usr/bin/gfortran-4.3
-    spec: gcc@4.3.4
-    target: x86_64
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules: []
-    operating_system: suse_linux11
-    paths:
-      cc: /gpfsm/dulocal/sles11/other/SLES11.3/gcc/6.3/bin/gcc
-      cxx: /gpfsm/dulocal/sles11/other/SLES11.3/gcc/6.3/bin/g++
-      f77: /gpfsm/dulocal/sles11/other/SLES11.3/gcc/6.3/bin/gfortran
-      fc: /gpfsm/dulocal/sles11/other/SLES11.3/gcc/6.3/bin/gfortran
-    spec: gcc@6.3.0
-    target: x86_64
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules: []
-    operating_system: suse_linux11
+    operating_system: rhel7
     paths:
       cc: /usr/bin/gcc
       cxx: /usr/bin/g++
-      f77: null
-      fc: null
-    spec: gcc@4.3
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    spec: gcc@4.8.5
     target: x86_64
 - compiler:
     environment:
       append-path:
-        LD_LIBRARY_PATH: /usr/local/intel/2018/compilers_and_libraries_2018.1.163/linux/compiler/lib/intel64_lin
+        LD_LIBRARY_PATH: /usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/lib/intel64
     extra_rpaths: []
     flags: {}
     modules: []
-    operating_system: suse_linux11
+    operating_system: rhel7
     paths:
-      cc: /gpfsm/dulocal/sles11/intel/2018/compilers_and_libraries_2018.1.163/linux/bin/intel64/icc
-      cxx: /gpfsm/dulocal/sles11/intel/2018/compilers_and_libraries_2018.1.163/linux/bin/intel64/icpc
-      f77: /gpfsm/dulocal/sles11/intel/2018/compilers_and_libraries_2018.1.163/linux/bin/intel64/ifort
-      fc: /gpfsm/dulocal/sles11/intel/2018/compilers_and_libraries_2018.1.163/linux/bin/intel64/ifort
+      cc: /gpfs/dell1/usrx/local/prod/intel/2018UP01/compilers_and_libraries_2018/linux/bin/intel64/icc
+      cxx: /gpfs/dell1/usrx/local/prod/intel/2018UP01/compilers_and_libraries_2018/linux/bin/intel64/icpc
+      f77: /gpfs/dell1/usrx/local/prod/intel/2018UP01/compilers_and_libraries_2018/linux/bin/intel64/ifort
+      fc: /gpfs/dell1/usrx/local/prod/intel/2018UP01/compilers_and_libraries_2018/linux/bin/intel64/ifort
     spec: intel@18.0.1
-    target: x86_64
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules: []
-    operating_system: suse_linux11
-    paths:
-      cc: /gpfsm/dnb32/mbhat/GCC/install/gcc-4.6.3/bin/gcc
-      cxx: /gpfsm/dnb32/mbhat/GCC/install/gcc-4.6.3/bin/g++
-      f77: /gpfsm/dnb32/mbhat/GCC/install/gcc-4.6.3/bin/gfortran
-      fc: /gpfsm/dnb32/mbhat/GCC/install/gcc-4.6.3/bin/gfortran
-    spec: gcc@4.6.3
-    target: x86_64
-- compiler:
-    environment:
-      append-path:
-        LD_LIBRARY_PATH: /usr/local/intel/Composer/composer_xe_2015.2.164/compiler/lib/intel64
-    extra_rpaths: []
-    flags: {}
-    modules: []
-    operating_system: suse_linux11
-    paths:
-      cc: /gpfsm/dulocal/sles11/intel/Composer/composer_xe_2015.2.164/bin/intel64/icc
-      cxx: /gpfsm/dulocal/sles11/intel/Composer/composer_xe_2015.2.164/bin/intel64/icpc
-      f77: /gpfsm/dulocal/sles11/intel/Composer/composer_xe_2015.2.164/bin/intel64/ifort
-      fc: /gpfsm/dulocal/sles11/intel/Composer/composer_xe_2015.2.164/bin/intel64/ifort
-    spec: intel@15.0.2
-    target: x86_64
-- compiler:
-    environment:
-      append-path:
-        LD_LIBRARY_PATH: /usr/local/other/SLES11.3/gcc/7.3/lib64
-    extra_rpaths: []
-    flags: {}
-    modules: []
-    operating_system: suse_linux11
-    paths:
-      cc: /gpfsm/dulocal/sles11/other/SLES11.3/gcc/7.3/bin/gcc
-      cxx: /gpfsm/dulocal/sles11/other/SLES11.3/gcc/7.3/bin/g++
-      f77: /gpfsm/dulocal/sles11/other/SLES11.3/gcc/7.3/bin/gfortran
-      fc: /gpfsm/dulocal/sles11/other/SLES11.3/gcc/7.3/bin/gfortran
-    spec: gcc@7.3.0
     target: x86_64
