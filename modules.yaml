@@ -50,6 +50,10 @@ modules:
         set:
           '${PACKAGE}_ROOT': '${PREFIX}'
           '${PACKAGE}': '${PREFIX}'
+      suffixes:
+        '^mvapich2': mvapich2
+        '^openmpi': openmpi
+        '^intel-mpi': impi
     bacio:
       environment:
         set:
