@@ -57,6 +57,7 @@ modules:
     bacio:
       environment:
         set:
+          '${PACKAGE}_VER': '${VERSION}'
           '${PACKAGE}_ROOT': '${PREFIX}'
           '${PACKAGE}_LIBd': '${PREFIX}/lib/libbacio_${VERSION}_8.a'
           '${PACKAGE}_LIB4': '${PREFIX}/lib/libbacio_${VERSION}_4.a'
@@ -65,6 +66,7 @@ modules:
       environment:
         set:
           '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_VER': '${VERSION}'
           '${PACKAGE}_LIB8': '${PREFIX}/lib/libbufr_${VERSION}_8.a'
           '${PACKAGE}_LIBd': '${PREFIX}/lib/libbufr_${VERSION}_d.a'
           '${PACKAGE}_LIB4': '${PREFIX}/lib/libbufr_${VERSION}_4.a'
@@ -77,6 +79,7 @@ modules:
       environment:
         set:
           '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_VER': '${VERSION}'
           '${PACKAGE}_LIB': '${PREFIX}/lib/libnemsio_${VERSION}.a'
           '${PACKAGE}_INC': '${PREFIX}/include'
           '${PACKAGE}': '${PREFIX}'
@@ -84,13 +87,17 @@ modules:
       environment:
         set:
           '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_VER': '${VERSION}'
           '${PACKAGE}_LIB': '${PREFIX}/lib/libsfcio_${VERSION}.a'
+          '${PACKAGE}_LIB4': '${PREFIX}/lib/libsfcio_${VERSION}.a'
+          '${PACKAGE}_INC4': '${PREFIX}/include'
           '${PACKAGE}_INC': '${PREFIX}/include'
           '${PACKAGE}': '${PREFIX}'
     sigio:
       environment:
         set:
           '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_VER': '${VERSION}'
           '${PACKAGE}_LIB': '${PREFIX}/lib/libsigio_${VERSION}.a'
           '${PACKAGE}_LIB4': '${PREFIX}/lib/libsigio_${VERSION}.a'
           '${PACKAGE}_INC': '${PREFIX}/include'
@@ -100,6 +107,7 @@ modules:
       environment:
         set:
           '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_VER': '${VERSION}'
           '${PACKAGE}_LIB8': '${PREFIX}/lib/libsp_${VERSION}_8.a'
           '${PACKAGE}_LIBd': '${PREFIX}/lib/libsp_${VERSION}_d.a'
           '${PACKAGE}_LIB4': '${PREFIX}/lib/libsp_${VERSION}_4.a'
@@ -108,7 +116,11 @@ modules:
       environment:
         set:
           '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_VER': '${VERSION}'
           '${PACKAGE}_LIB8': '${PREFIX}/lib/libw3emc_${VERSION}_8.a'
+          '${PACKAGE}_INC4': '${PREFIX}/include_4'
+          '${PACKAGE}_INC8': '${PREFIX}/include_8'
+          '${PACKAGE}_INCd': '${PREFIX}/include_d'
           '${PACKAGE}_LIBd': '${PREFIX}/lib/libw3emc_${VERSION}_d.a'
           '${PACKAGE}_LIB4': '${PREFIX}/lib/libw3emc_${VERSION}_4.a'
           '${PACKAGE}': '${PREFIX}'
@@ -116,6 +128,7 @@ modules:
       environment:
         set:
           '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_VER': '${VERSION}'
           '${PACKAGE}_LIB8': '${PREFIX}/lib/libw3nco_${VERSION}_8.a'
           '${PACKAGE}_LIBd': '${PREFIX}/lib/libw3nco_${VERSION}_d.a'
           '${PACKAGE}_LIB4': '${PREFIX}/lib/libw3nco_${VERSION}_4.a'
