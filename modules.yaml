@@ -52,8 +52,14 @@ modules:
           '${PACKAGE}': '${PREFIX}'
       suffixes:
         '^mvapich2': mvapich2
+        '^mpich': mpich
         '^openmpi': openmpi
         '^intel-mpi': impi
+    intel-mpi:
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}': '${PREFIX}'
     bacio:
       environment:
         set:
@@ -72,6 +78,12 @@ modules:
           '${PACKAGE}_LIBd_DA': '${PREFIX}/lib/libbufr_${VERSION}_d_DA.a'
           '${PACKAGE}_LIB4_DA': '${PREFIX}/lib/libbufr_${VERSION}_4_DA.a'
           '${PACKAGE}_LIB4_SS': '${PREFIX}/lib/libbufr_${VERSION}_4_SS.a'
+          '${PACKAGE}': '${PREFIX}'
+    esmf:
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+          '${PACKAGE}_VER': '${VERSION}'
           '${PACKAGE}': '${PREFIX}'
     nemsio:
       environment:

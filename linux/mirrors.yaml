@@ -1,2 +1,2 @@
 mirrors:
-  local-mirror: file:///discover/nobackup/mapotts1/spack-mirror
+  local: file:///home/mpotts/spack-mirror
