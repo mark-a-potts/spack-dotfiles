@@ -25,6 +25,17 @@ modules:
         set:
           '${PACKAGE}_DIR': '${PREFIX}'
           '${PACKAGE}': '${PREFIX}'
+      suffixes:
+        '^mvapich2': mvapich2
+        '^mpich': mpich
+        '^openmpi': openmpi
+        '^intel-mpi': impi
+    jasper:
+      environment:
+        set:
+          '${PACKAGE}_DIR': '${PREFIX}'
+          '${PACKAGE}': '${PREFIX}'
+          '${PACKAGE}_INCLUDE_DIR': '${PREFIX}/include'
     bacio:
       environment:
         set:
@@ -173,6 +184,8 @@ modules:
           '${PACKAGE}_DIR': '${PREFIX}'
   prefix_inspections:
     bin:
+      - PATH
+    include:
       - PATH
     man:
       - MANPATH
