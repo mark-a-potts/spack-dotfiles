@@ -182,6 +182,14 @@ modules:
         set:
           '${PACKAGE}': '${PREFIX}'
           '${PACKAGE}_DIR': '${PREFIX}'
+    prod-util:
+      environment:
+        set:
+          '${PACKAGE}': '${PREFIX}'
+          '${PACKAGE}_DIR': '${PREFIX}'
+          'NDATE': '${PREFIX}/bin/ndate'
+          'MDATE': '${PREFIX}/bin/mdate'
+          'NHOUR': '${PREFIX}/bin/nhour'
   prefix_inspections:
     bin:
       - PATH
