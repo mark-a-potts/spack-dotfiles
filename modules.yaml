@@ -17,9 +17,9 @@ modules:
   tcl:
     hash_length: 0
     naming_scheme: '${PACKAGE}/${VERSION}-${COMPILERNAME}-${COMPILERVER}'
-    blacklist:
-      -  '%gcc@4.4.7'
-      -  '%gcc@4.8.5'
+#   blacklist:
+#     -  '%gcc@4.4.7'
+#     -  '%gcc@4.8.5'
     all:
       environment:
         set:
