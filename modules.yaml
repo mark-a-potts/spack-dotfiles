@@ -14,194 +14,223 @@
 #   ~/.spack/modules.yaml
 # -------------------------------------------------------------------------
 modules:
-  tcl:
-    hash_length: 0
-    naming_scheme: '${PACKAGE}/${VERSION}-${COMPILERNAME}-${COMPILERVER}'
-    blacklist:
-      -  '%gcc@4.4.7'
-      -  '%gcc@4.8.5'
-    all:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}': '${PREFIX}'
-      suffixes:
-        '^mvapich2': mvapich2
-        '^mpich': mpich
-        '^openmpi': openmpi
-        '^intel-mpi': impi
-    jasper:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}': '${PREFIX}'
-          '${PACKAGE}_INCLUDE_DIR': '${PREFIX}/include'
-    bacio:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIBd': '${PREFIX}/lib/libbacio_${VERSION}_8.a'
-          '${PACKAGE}_LIB8': '${PREFIX}/lib/libbacio_${VERSION}_8.a'
-          '${PACKAGE}_LIB4': '${PREFIX}/lib/libbacio_${VERSION}_4.a'
-          '${PACKAGE}': '${PREFIX}'
-    bufr:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIB8': '${PREFIX}/lib/libbufr_${VERSION}_8.a'
-          '${PACKAGE}_LIBd': '${PREFIX}/lib/libbufr_${VERSION}_d.a'
-          '${PACKAGE}_LIB4': '${PREFIX}/lib/libbufr_${VERSION}_4.a'
-          '${PACKAGE}_LIB8_DA': '${PREFIX}/lib/libbufr_${VERSION}_8_DA.a'
-          '${PACKAGE}_LIBd_DA': '${PREFIX}/lib/libbufr_${VERSION}_d_DA.a'
-          '${PACKAGE}_LIB4_DA': '${PREFIX}/lib/libbufr_${VERSION}_4_DA.a'
-          '${PACKAGE}_LIB4_SS': '${PREFIX}/lib/libbufr_${VERSION}_4_SS.a'
-          '${PACKAGE}': '${PREFIX}'
-    nemsiogfs:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIB': '${PREFIX}/lib/libnemsiogfs_${VERSION}.a'
-          '${PACKAGE}_INC': '${PREFIX}/include'
-          '${PACKAGE}': '${PREFIX}'
-    crtm:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIB': '${PREFIX}/lib/libcrtm_${VERSION}.a'
-          '${PACKAGE}_INC': '${PREFIX}/include'
-          '${PACKAGE}': '${PREFIX}'
-    nemsio:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIB': '${PREFIX}/lib/libnemsio_${VERSION}.a'
-          '${PACKAGE}_INC': '${PREFIX}/include'
-          '${PACKAGE}': '${PREFIX}'
-    sfcio:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIB': '${PREFIX}/lib/libsfcio_${VERSION}.a'
-          '${PACKAGE}_INC': '${PREFIX}/include'
-          '${PACKAGE}_LIB4': '${PREFIX}/lib/libsfcio_${VERSION}.a'
-          '${PACKAGE}_INC4': '${PREFIX}/include'
-          '${PACKAGE}': '${PREFIX}'
-    sigio:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIB': '${PREFIX}/lib/libsigio_${VERSION}.a'
-          '${PACKAGE}_LIB4': '${PREFIX}/lib/libsigio_${VERSION}.a'
-          '${PACKAGE}_INC': '${PREFIX}/include'
-          '${PACKAGE}_INC4': '${PREFIX}/include'
-          '${PACKAGE}': '${PREFIX}'
-    sp:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIB8': '${PREFIX}/lib/libsp_${VERSION}_8.a'
-          '${PACKAGE}_LIBd': '${PREFIX}/lib/libsp_${VERSION}_d.a'
-          '${PACKAGE}_LIB4': '${PREFIX}/lib/libsp_${VERSION}_4.a'
-          '${PACKAGE}': '${PREFIX}'
-    w3emc:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIB8': '${PREFIX}/lib/libw3emc_${VERSION}_8.a'
-          '${PACKAGE}_LIBd': '${PREFIX}/lib/libw3emc_${VERSION}_d.a'
-          '${PACKAGE}_LIB4': '${PREFIX}/lib/libw3emc_${VERSION}_4.a'
-          '${PACKAGE}_INC4': '${PREFIX}/include_4'
-          '${PACKAGE}_INC8': '${PREFIX}/include_8'
-          '${PACKAGE}_INCd': '${PREFIX}/include_d'
-          '${PACKAGE}': '${PREFIX}'
-    w3nco:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIB8': '${PREFIX}/lib/libw3nco_${VERSION}_8.a'
-          '${PACKAGE}_LIBd': '${PREFIX}/lib/libw3nco_${VERSION}_d.a'
-          '${PACKAGE}_LIB4': '${PREFIX}/lib/libw3nco_${VERSION}_4.a'
-          '${PACKAGE}': '${PREFIX}'
-    gfsio:
-      environment:
-        set:
-          '${PACKAGE}_VER': '${VERSION}'
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIB4': '${PREFIX}/lib/libgfsio_${VERSION}_4.a'
-          '${PACKAGE}_INC4': '${PREFIX}/include_4'
-    g2tmpl:
-      environment:
-        set:
-          '${PACKAGE}_VER': '${VERSION}'
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIBd': '${PREFIX}/lib/libg2tmpl_${VERSION}_d.a'
-          '${PACKAGE}_INCd': '${PREFIX}/include_d'
-    g2:
-      environment:
-        set:
-          '${PACKAGE}_VER': '${VERSION}'
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIBd': '${PREFIX}/lib/libg2_${VERSION}_d.a'
-          '${PACKAGE}_LIB4': '${PREFIX}/lib/libg2_${VERSION}_4.a'
-          '${PACKAGE}_INCd': '${PREFIX}/include_d'
-          '${PACKAGE}_INC4': '${PREFIX}/include_4'
-          '${PACKAGE}': '${PREFIX}'
-    ip:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIB8': '${PREFIX}/lib/libip_${VERSION}_8.a'
-          '${PACKAGE}_LIBd': '${PREFIX}/lib/libip_${VERSION}_d.a'
-          '${PACKAGE}_LIB4': '${PREFIX}/lib/libip_${VERSION}_4.a'
-          '${PACKAGE}_INCd': '${PREFIX}/include_d'
-          '${PACKAGE}_INC4': '${PREFIX}/include_4'
-          '${PACKAGE}_INC8': '${PREFIX}/include_8'
-          '${PACKAGE}': '${PREFIX}'
-    ip2:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIB8': '${PREFIX}/lib/libip2_${VERSION}_8.a'
-          '${PACKAGE}_LIBd': '${PREFIX}/lib/libip2_${VERSION}_d.a'
-          '${PACKAGE}_LIB4': '${PREFIX}/lib/libip2_${VERSION}_4.a'
-          '${PACKAGE}_INCd': '${PREFIX}/include_d'
-          '${PACKAGE}_INC4': '${PREFIX}/include_4'
-          '${PACKAGE}_INC8': '${PREFIX}/include_8'
-          '${PACKAGE}': '${PREFIX}'
-    landsfcutil:
-      environment:
-        set:
-          '${PACKAGE}_DIR': '${PREFIX}'
-          '${PACKAGE}_LIBd': '${PREFIX}/lib/liblandsfcutil_${VERSION}_d.a'
-          '${PACKAGE}_LIB4': '${PREFIX}/lib/liblandsfcutil_${VERSION}_4.a'
-          '${PACKAGE}_INCd': '${PREFIX}/include_d'
-          '${PACKAGE}_INC4': '${PREFIX}/include_4'
-          '${PACKAGE}': '${PREFIX}'
-    grib-util:
-      environment:
-        set:
-          '${PACKAGE}': '${PREFIX}'
-          '${PACKAGE}_DIR': '${PREFIX}'
-    prod-util:
-      environment:
-        set:
-          '${PACKAGE}': '${PREFIX}'
-          '${PACKAGE}_DIR': '${PREFIX}'
-          'NDATE': '${PREFIX}/bin/ndate'
-          'MDATE': '${PREFIX}/bin/mdate'
-          'NHOUR': '${PREFIX}/bin/nhour'
-  prefix_inspections:
-    bin:
-      - PATH
-    include:
-      - PATH
-    man:
-      - MANPATH
-    share/man:
-      - MANPATH
-    share/aclocal:
-      - ACLOCAL_PATH
-    lib:
-      - LIBRARY_PATH
-    lib64:
-      - LIBRARY_PATH
+  enable::
+   - lmod
+  lmod:
+   core_compilers:
+     - 'gcc@7.5.0'
+   core_specs:
+     - 'python'
+     - 'perl'
+     - 'zlib'
+     - 'cmake'
+     - 'openssl'
+     - 'bzip2'
+     - 'libiconv'
+     - 'readline'
+     - 'xz'
+     - 'pkgconf'
+     - 'libxml2'
+     - 'libsigsegv'
+     - 'm4'
+     - 'gdbm'
+     - 'ninja'
+     - 'libtool'
+     - 'diffutils'
+     - 'autoconf'
+     - 'automake'
+   hierarchy:
+     - mpi
+     - lapack
+   hash_length: 0
+   whitelist:
+     - gcc
+   blacklist:
+     - '%gcc@7.4.0'
+   all:
+     suffixes:
+       '^openblas': openblas
+     filter:
+       environment_blacklist: ['CPATH', 'LIBRARY_PATH']
+
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}': '${PREFIX}'
+   go:
+     environment:
+       set:
+         '${PACKAGE}': '${PREFIX}/bin/go'
+   python:
+     environment:
+       set:
+         '${PACKAGE}': '${PREFIX}/bin/python'
+   esmf:
+     environment:
+       set:
+         'ESMFMKFILE': '${PREFIX}/lib/esmf.mk'
+   jasper:
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}': '${PREFIX}'
+         '${PACKAGE}_INCLUDE_DIR': '${PREFIX}/include'
+   bacio:
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIBd': '${PREFIX}/lib/libbacio_${VERSION}_8.a'
+         '${PACKAGE}_LIB8': '${PREFIX}/lib/libbacio_${VERSION}_8.a'
+         '${PACKAGE}_LIB4': '${PREFIX}/lib/libbacio_${VERSION}_4.a'
+         '${PACKAGE}': '${PREFIX}'
+   bufr:
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIB8': '${PREFIX}/lib/libbufr_${VERSION}_8.a'
+         '${PACKAGE}_LIBd': '${PREFIX}/lib/libbufr_${VERSION}_d.a'
+         '${PACKAGE}_LIB4': '${PREFIX}/lib/libbufr_${VERSION}_4.a'
+         '${PACKAGE}_LIB8_DA': '${PREFIX}/lib/libbufr_${VERSION}_8_DA.a'
+         '${PACKAGE}_LIBd_DA': '${PREFIX}/lib/libbufr_${VERSION}_d_DA.a'
+         '${PACKAGE}_LIB4_DA': '${PREFIX}/lib/libbufr_${VERSION}_4_DA.a'
+         '${PACKAGE}_LIB4_SS': '${PREFIX}/lib/libbufr_${VERSION}_4_SS.a'
+         '${PACKAGE}': '${PREFIX}'
+   nemsiogfs:
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIB': '${PREFIX}/lib/libnemsiogfs_${VERSION}.a'
+         '${PACKAGE}_INC': '${PREFIX}/include'
+         '${PACKAGE}': '${PREFIX}'
+   crtm:
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIB': '${PREFIX}/lib/libcrtm_${VERSION}.a'
+         '${PACKAGE}_INC': '${PREFIX}/include'
+         '${PACKAGE}': '${PREFIX}'
+   nemsio:
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIB': '${PREFIX}/lib/libnemsio_${VERSION}.a'
+         '${PACKAGE}_INC': '${PREFIX}/include'
+         '${PACKAGE}': '${PREFIX}'
+   sfcio:
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIB': '${PREFIX}/lib/libsfcio_${VERSION}_4.a'
+         '${PACKAGE}_INC': '${PREFIX}/include_4'
+         '${PACKAGE}_LIB4': '${PREFIX}/lib/libsfcio_${VERSION}_4.a'
+         '${PACKAGE}_INC4': '${PREFIX}/include_4'
+         '${PACKAGE}': '${PREFIX}'
+   sigio:
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIB': '${PREFIX}/lib/libsigio_${VERSION}_4.a'
+         '${PACKAGE}_LIB4': '${PREFIX}/lib/libsigio_${VERSION}_4.a'
+         '${PACKAGE}_INC': '${PREFIX}/include_4'
+         '${PACKAGE}_INC4': '${PREFIX}/include_4'
+         '${PACKAGE}': '${PREFIX}'
+   sp:
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIB8': '${PREFIX}/lib/libsp_${VERSION}_8.a'
+         '${PACKAGE}_LIBd': '${PREFIX}/lib/libsp_${VERSION}_d.a'
+         '${PACKAGE}_LIB4': '${PREFIX}/lib/libsp_${VERSION}_4.a'
+         '${PACKAGE}': '${PREFIX}'
+   w3emc:
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIB8': '${PREFIX}/lib/libw3emc_${VERSION}_8.a'
+         '${PACKAGE}_LIBd': '${PREFIX}/lib/libw3emc_${VERSION}_d.a'
+         '${PACKAGE}_LIB4': '${PREFIX}/lib/libw3emc_${VERSION}_4.a'
+         '${PACKAGE}_INC4': '${PREFIX}/include_4'
+         '${PACKAGE}_INC8': '${PREFIX}/include_8'
+         '${PACKAGE}_INCd': '${PREFIX}/include_d'
+         '${PACKAGE}': '${PREFIX}'
+   w3nco:
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIB8': '${PREFIX}/lib/libw3nco_${VERSION}_8.a'
+         '${PACKAGE}_LIBd': '${PREFIX}/lib/libw3nco_${VERSION}_d.a'
+         '${PACKAGE}_LIB4': '${PREFIX}/lib/libw3nco_${VERSION}_4.a'
+         '${PACKAGE}': '${PREFIX}'
+   gfsio:
+     environment:
+       set:
+         '${PACKAGE}_VER': '${VERSION}'
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIB4': '${PREFIX}/lib/libgfsio_${VERSION}_4.a'
+         '${PACKAGE}_INC4': '${PREFIX}/include_4'
+   g2tmpl:
+     environment:
+       set:
+         '${PACKAGE}_VER': '${VERSION}'
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIBd': '${PREFIX}/lib/libg2tmpl_${VERSION}_d.a'
+         '${PACKAGE}_INCd': '${PREFIX}/include_d'
+   g2:
+     environment:
+       set:
+         '${PACKAGE}_VER': '${VERSION}'
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIBd': '${PREFIX}/lib/libg2_${VERSION}_d.a'
+         '${PACKAGE}_LIB4': '${PREFIX}/lib/libg2_${VERSION}_4.a'
+         '${PACKAGE}_INCd': '${PREFIX}/include_d'
+         '${PACKAGE}_INC4': '${PREFIX}/include_4'
+         '${PACKAGE}': '${PREFIX}'
+   ip:
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIB8': '${PREFIX}/lib/libip_${VERSION}_8.a'
+         '${PACKAGE}_LIBd': '${PREFIX}/lib/libip_${VERSION}_d.a'
+         '${PACKAGE}_LIB4': '${PREFIX}/lib/libip_${VERSION}_4.a'
+         '${PACKAGE}_INCd': '${PREFIX}/include_d'
+         '${PACKAGE}_INC4': '${PREFIX}/include_4'
+         '${PACKAGE}_INC8': '${PREFIX}/include_8'
+         '${PACKAGE}': '${PREFIX}'
+   ip2:
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIB8': '${PREFIX}/lib/libip2_${VERSION}_8.a'
+         '${PACKAGE}_LIBd': '${PREFIX}/lib/libip2_${VERSION}_d.a'
+         '${PACKAGE}_LIB4': '${PREFIX}/lib/libip2_${VERSION}_4.a'
+         '${PACKAGE}_INCd': '${PREFIX}/include_d'
+         '${PACKAGE}_INC4': '${PREFIX}/include_4'
+         '${PACKAGE}_INC8': '${PREFIX}/include_8'
+         '${PACKAGE}': '${PREFIX}'
+   landsfcutil:
+     environment:
+       set:
+         '${PACKAGE}_DIR': '${PREFIX}'
+         '${PACKAGE}_LIBd': '${PREFIX}/lib/liblandsfcutil_${VERSION}_d.a'
+         '${PACKAGE}_LIB4': '${PREFIX}/lib/liblandsfcutil_${VERSION}_4.a'
+         '${PACKAGE}_INCd': '${PREFIX}/include_d'
+         '${PACKAGE}_INC4': '${PREFIX}/include_4'
+         '${PACKAGE}': '${PREFIX}'
+   grib-util:
+     environment:
+       set:
+         '${PACKAGE}': '${PREFIX}'
+         '${PACKAGE}_DIR': '${PREFIX}'
+   prod-util:
+     environment:
+       set:
+         '${PACKAGE}': '${PREFIX}'
+         '${PACKAGE}_DIR': '${PREFIX}'
+         'NDATE': '${PREFIX}/bin/ndate'
+         'MDATE': '${PREFIX}/bin/mdate'
+         'NHOUR': '${PREFIX}/bin/nhour'
+   openmpi:
+     environment:
+       set:
+         SLURM_MPI_TYPE: pmi2
+         OMPI_MCA_btl_openib_warn_default_gid_prefix: '0'
